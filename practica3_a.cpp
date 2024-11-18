@@ -46,3 +46,75 @@ bool enMismaLinea(const vector<Coordenada>& coords) {
     }
     return true;
 }
+
+int main (){
+
+vector<Coordenada> coordenadas;
+int x, y;
+char opcion;
+
+    do
+    {
+        cout<< "introduce las coordenadas x y: ";
+        cin>> x >> y;
+        coordenadas.push_back({x, y});
+        cout<< "quieres introducir otra coordenadas? (s/n): ";
+        cin>> opcion;
+
+    } while (opcion=='s'|| opcion=='S');
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
