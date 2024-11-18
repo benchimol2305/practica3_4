@@ -24,3 +24,13 @@ string determinarCuadrante(const Coordenada& coord) {
         return "Origen";
     }
 }
+
+string ecuacionRecta(const Coordenada& p1, const Coordenada& p2) {
+    if (p1.x == p2.x) {
+        return "x = " + to_string(p1.x);
+    } else {
+        double pendiente = static_cast<double>(p2.y - p1.y) / (p2.x - p1.x);
+        double intercepto= p1.y - pendiente * p1.x;
+        return "y = " + to_string(pendiente) + "x + " + to_string(intercepto);
+    }
+}
