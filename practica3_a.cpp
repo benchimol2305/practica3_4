@@ -62,6 +62,14 @@ char opcion;
         cin>> opcion;
 
     } while (opcion=='s'|| opcion=='S');
+
+    for (const auto& coord : coordenadas)
+    {
+        cout<<"la coordenada (" << coord.x << "," << coord.y << ") se encuentra en el" << determinarCuadrante(coord) << endl;
+
+    }
+
+    
     
 
 
