@@ -69,60 +69,14 @@ char opcion;
 
     }
 
-    
-    
+    if (enMismaLinea(coordenadas)) {
+        cout << "las coordenadas estan en la misma linea" << endl;
+        if (coordenadas.size() > 1) {
+            cout << "La ecuacion de la linea es: " << ecuacionRecta(coordenadas[0], coordenadas[1]) << endl;
+        }
+    } else {
+        cout << "las coordenadas no estan en la misma linea" << endl;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return 0;
 }
