@@ -34,3 +34,15 @@ string ecuacionRecta(const Coordenada& p1, const Coordenada& p2) {
         return "y = " + to_string(pendiente) + "x + " + to_string(intercepto);
     }
 }
+
+bool enMismaLinea(const vector<Coordenada>& coords) {
+    if (coords.size() < 2) return true;
+
+    double pendienteInicial = static_cast<double>(coords[1].y - coords[0].y) / (coords[1].x - coords[0].x);
+
+    for (size_t i = 2; i < coords.size(); ++i) {
+        double pendienteActual = static_cast<double>(coords[i].y - coords[0].y) / (coords[i].x - coords[0].x);
+        if (pendienteActual != pendienteInicial) return false;
+    }
+    return true;
+}
