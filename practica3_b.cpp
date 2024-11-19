@@ -31,4 +31,24 @@ double distanciaMaxima(Punto puntos[], int n, int xMin, int xMax, int yMin, int 
             }
         }
     }
+     if (!found) return -1;  // Si no se encontraron puntos, devolver -1
+    return maxDistancia;
 }
+
+void imprimirDistanciasDesdePunto(const Punto& origen, Punto puntos[], int n, int xMin, int xMax, int yMin, int yMax) {
+    cout << "Distancias desde el punto (" << origen.x << ", " << origen.y << "):\n";
+    for (int i = 0; i < n; ++i) {
+        if (dentroDelCuadrante(puntos[i], xMin, xMax, yMin, yMax) && !(puntos[i].x == origen.x && puntos[i].y == origen.y)) {
+            double distancia = calcularDistancia(origen, puntos[i]);
+            cout << "Hasta (" << puntos[i].x << ", " << puntos[i].y << ") = " << distancia << endl;
+        }
+    }
+}
+
+int main() {
+    const int MAX_PUNTOS = 100;
+    Punto puntos[MAX_PUNTOS];
+    int n = 0; 
+    int x, y;
+    char opcion;
+
