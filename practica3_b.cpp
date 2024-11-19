@@ -84,7 +84,7 @@ int main() {
     }
 
     int puntoIndice;
-    cout << "elige el indice del punto para calcular las distancias: ";
+    cout << "elige el indice del punto para calcular las distancias (de 0 a 0): ";
     cin >> puntoIndice;
 
     if (puntoIndice >= 0 && puntoIndice < n) {
