@@ -52,3 +52,49 @@ int main() {
     int x, y;
     char opcion;
 
+     int xMin, xMax, yMin, yMax;
+    cout << "Ingrese los limites del cuadrante:\n";
+    cout << "xMin: "; cin >> xMin;
+    cout << "xMax: "; cin >> xMax;
+    cout << "yMin: "; cin >> yMin;
+    cout << "yMax: "; cin >> yMax;
+
+    // Ingresar puntos
+    cout << "introduce las coordenadas de los puntos.\n";
+    do {
+        if (n >= MAX_PUNTOS) {
+            cout << "se ha alcanzado el numero maximo de puntos." << endl;
+            break;
+        }
+
+        cout << "introduce las coordenadas (x y): ";
+        cin >> x >> y;
+        puntos[n] = {x, y};
+        n++;
+
+        cout << "quiere introducir otra coordenada? (s/n): ";
+        cin >> opcion;
+    } while (opcion == 's' || opcion == 'S');
+
+    double maxDistancia = distanciaMaxima(puntos, n, xMin, xMax, yMin, yMax);
+    if (maxDistancia == -1) {
+        cout << "no se encontraron dos puntos dentro del cuadrante" << endl;
+    } else {
+        cout << "la distancia maxima entre dos puntos dentro del cuadrante es: " << maxDistancia << endl;
+    }
+
+    int puntoIndice;
+    cout << "elige el indice del punto para calcular las distancias: ";
+    cin >> puntoIndice;
+
+    if (puntoIndice >= 0 && puntoIndice < n) {
+        imprimirDistanciasDesdePunto(puntos[puntoIndice], puntos, n, xMin, xMax, yMin, yMax);
+    } else {
+        cout << "indice de punto no valido" << endl;
+    }
+
+    return 0;
+}
+
+
+
