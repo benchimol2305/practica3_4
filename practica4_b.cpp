@@ -26,3 +26,18 @@ double calcularAngulo(const Punto& inicio1, const Punto& fin1, const Punto& inic
 
     return angulo;
 }
+
+int main() {
+    Punto inicio_1, fin_1, inicio_2, fin_2;
+
+    cout << "introduce las coordenadas de la primera linea (inicio y fin):" << endl;
+    cout << "inicio x1 y1: ";
+    cin >> inicio_1.x >> inicio_1.y;
+    cout << "fin  x2 y2: ";
+    cin >> fin_1.x >> fin_1.y;
+    
+    cout << "introduce las coordenadas de la segunda línea (inicio y fin):" << endl;
+    cout << "inicio x3 y3: ";
+    cin >> inicio_2.x >> inicio_2.y;
+    cout << "fin x4 y4: ";
+    cin >> fin_2.x >> fin_2.y;
