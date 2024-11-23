@@ -44,3 +44,14 @@ int main() {
 
     double anguloRadianes = calcularAngulo(inicio_1, fin_1, inicio_2, fin_2);
     cout << "angulo en radianes: " << anguloRadianes << endl;
+
+    double anguloGrados = calcularAngulo(inicio_1, fin_1, inicio_2, fin_2, true);
+    cout << "angulo en grados: " << anguloGrados << endl;
+
+    return 0;
+    // para probar el codigo puede usar estos ejemplos linea 1 inicio (0,0) fin (2,2)
+    // linea 2 inicio (0,2) fin (2,0)
+    // angulo en radianes= 1.57 angulo en grados= 90
+    
+}
+
