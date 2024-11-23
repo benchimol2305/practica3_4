@@ -51,3 +51,6 @@ int main() {
     cin >> inicio2.x >> inicio2.y;
     cout << "Fin x4 y4: ";
     cin >> fin2.x >> fin2.y;
+
+    int resultado = determinarInterseccion(inicio1, fin1, inicio2, fin2);
+    cout << "Resultado de intersección: " << resultado << endl;
