@@ -19,3 +19,10 @@ double calcularAngulo(const Punto& inicio1, const Punto& fin1, const Punto& inic
     double magnitud2 = sqrt(dx2 * dx2 + dy2 * dy2);
 
     double angulo = acos(productoEscalar / (magnitud1 * magnitud2));
+
+     if (enGrados) {
+        angulo = angulo * 180.0 / M_PI;
+    }
+
+    return angulo;
+}
