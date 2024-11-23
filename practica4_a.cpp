@@ -35,3 +35,19 @@ int determinarInterseccion(const Punto& inicio1, const Punto& fin1, const Punto&
         return -1; // Las líneas se cruzan pero no son perpendiculares
     }
 }
+
+int main() {
+    Punto inicio1, fin1, inicio2, fin2;
+
+    // Pide al usuario las coordenadas de las lineas
+    cout << "introduce las coordenadas de la primera linea (inicio y fin):" << endl;
+    cout << "inicio x1 y1: ";
+    cin >> inicio1.x >> inicio1.y;
+    cout << "fin x2 y2: ";
+    cin >> fin1.x >> fin1.y;
+    
+    cout << "introduce las coordenadas de la segunda linea (inicio y fin):" << endl;
+    cout << "Inicio x3 y3: ";
+    cin >> inicio2.x >> inicio2.y;
+    cout << "Fin x4 y4: ";
+    cin >> fin2.x >> fin2.y;
