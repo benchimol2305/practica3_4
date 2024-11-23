@@ -14,3 +14,6 @@ double calcularAngulo(const Punto& inicio1, const Punto& fin1, const Punto& inic
     double dy2 = fin2.y - inicio2.y;
 
     double productoEscalar = dx1 * dx2 + dy1 * dy2;
+
+    double magnitud1 = sqrt(dx1 * dx1 + dy1 * dy1);
+    double magnitud2 = sqrt(dx2 * dx2 + dy2 * dy2);
