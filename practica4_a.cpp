@@ -23,3 +23,15 @@ int determinarInterseccion(const Punto& inicio1, const Punto& fin1, const Punto&
         }
     }
 }
+int determinarInterseccion(const Punto& inicio1, const Punto& fin1, const Punto& inicio2, const Punto& fin2, bool checkPerpendicular) {
+    double pendiente1 = (fin1.y - inicio1.y) / (fin1.x - inicio1.x);
+    double pendiente2 = (fin2.y - inicio2.y) / (fin2.x - inicio2.x);
+    
+    if (pendiente1 == pendiente2) {
+        return 0; // Las líneas son paralelas
+    } else if (pendiente1 * pendiente2 == -1) {
+        return 1; // Las líneas son perpendiculares
+    } else {
+        return -1; // Las líneas se cruzan pero no son perpendiculares
+    }
+}
