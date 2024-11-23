@@ -54,3 +54,8 @@ int main() {
 
     int resultado = determinarInterseccion(inicio1, fin1, inicio2, fin2);
     cout << "Resultado de intersección: " << resultado << endl;
+    int resultadoPerpendicular = determinarInterseccion(inicio1, fin1, inicio2, fin2, true);
+    cout << "Resultado de perpendicularidad: " << resultadoPerpendicular << endl;
+
+    return 0;
+}
