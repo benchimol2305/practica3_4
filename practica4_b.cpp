@@ -6,12 +6,12 @@ struct Punto {
     double x, y;
 };
 
-double calcularAngulo(const Punto& inicio1, const Punto& fin1, const Punto& inicio2, const Punto& fin2, bool enGrados = false) {
-    double dx1 = fin1.x - inicio1.x;
-    double dy1 = fin1.y - inicio1.y;
+double calcularAngulo(const Punto& inicio_1, const Punto& fin_1, const Punto& inicio_2, const Punto& fin_2, bool enGrados = false) {
+    double dx1 = fin_1.x - inicio_1.x;
+    double dy1 = fin_1.y - inicio_1.y;
 
-    double dx2 = fin2.x - inicio2.x;
-    double dy2 = fin2.y - inicio2.y;
+    double dx2 = fin_2.x - inicio_2.x;
+    double dy2 = fin_2.y - inicio_2.y;
 
     double productoEscalar = dx1 * dx2 + dy1 * dy2;
 
@@ -41,3 +41,6 @@ int main() {
     cin >> inicio_2.x >> inicio_2.y;
     cout << "fin x4 y4: ";
     cin >> fin_2.x >> fin_2.y;
+
+    double anguloRadianes = calcularAngulo(inicio_1, fin_1, inicio_2, fin_2);
+    cout << "angulo en radianes: " << anguloRadianes << endl;
